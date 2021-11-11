@@ -24,8 +24,14 @@ return result;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arraString) {
   // seu código aqui
+  let result;
+  for ( let index = 0; index < arraString.length; index+=1) {
+    result = arraString[arraString.length - 1] + ', ' + arraString[0];
+  }
+  return result;
+
 }
 
 // Desafio 5
