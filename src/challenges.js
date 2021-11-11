@@ -8,9 +8,12 @@ function compareTrue(param1, param2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  const areaTriangulo = (base * height)/2;
+  return areaTriangulo;
 }
+
 
 // Desafio 3
 function splitSentence() {
