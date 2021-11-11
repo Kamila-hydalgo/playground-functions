@@ -14,10 +14,13 @@ function calcArea(base, height) {
   return areaTriangulo;
 }
 
-
 // Desafio 3
-function splitSentence() {
+// Referência sobre split: https://www.horadecodar.com.br/2020/04/06/javascript-transformar-string-em-array/
+
+function splitSentence(phrase) {
   // seu código aqui
+let result = phrase.split(" ");
+return result;
 }
 
 // Desafio 4
