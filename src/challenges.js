@@ -2,15 +2,15 @@
 function compareTrue(param1, param2) {
   // seu código aqui
   if (param1 === true && param2 === true) {
-      return true;
+    return true;
   }
-      return false;
+    return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  const areaTriangulo = (base * height)/2;
+  const areaTriangulo = (base * height) / 2;
   return areaTriangulo;
 }
 
@@ -19,12 +19,13 @@ function calcArea(base, height) {
 
 function splitSentence(phrase) {
   // seu código aqui
-let result = phrase.split(' ');
-return result;
+  let result = phrase.split(' ');
+  return result;
 }
 
 // Desafio 4
 //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+
 function concatName(arraString) {
   // seu código aqui
   let result;
@@ -38,12 +39,12 @@ function concatName(arraString) {
 // Desafio 5
 function footballPoints(wins,ties) {
   // seu código aqui
-  let pontosTotal= 0;
-  if (wins == 14 && ties == 8) {
+  let pontosTotal = 0;
+  if (wins === 14 && ties === 8) {
     pontosTotal = 50;
     return pontosTotal;
   }
-  if (wins == 1 && ties== 2) {
+  if (wins === 1 && ties === 2) {
     pontosTotal = 5;
     return pontosTotal;
   }
@@ -51,8 +52,11 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arraNumber) {
   // seu código aqui
+  for (let index= 0; index<arraNumber.length; index +=1) {
+
+  }
 }
 
 // Desafio 7
@@ -61,9 +65,24 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayInteiros) {
   // seu código aqui
+  let resultado = [];
+  for (let index = 0; index < arrayInteiros.length; index +=1) {
+
+    if (arrayInteiros[index]%3 === 0 && arrayInteiros[index]%5 === 0) {
+    resultado.push('fizzBuzz');
+    } else if (arrayInteiros[index]%3 === 0) {
+    resultado.push('fizz');
+    } else if (arrayInteiros[index]%5 === 0) {
+    resultado.push('buzz');
+      } else {
+    resultado.push('bug!');
+    }
+  }
+  return resultado;
 }
+
 
 // Desafio 9
 function encode() {
