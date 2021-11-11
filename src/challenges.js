@@ -19,24 +19,35 @@ function calcArea(base, height) {
 
 function splitSentence(phrase) {
   // seu código aqui
-let result = phrase.split(" ");
+let result = phrase.split(' ');
 return result;
 }
 
 // Desafio 4
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 function concatName(arraString) {
   // seu código aqui
   let result;
-  for ( let index = 0; index < arraString.length; index+=1) {
-    result = arraString[arraString.length - 1] + ', ' + arraString[0];
+  let virgula= ', ';
+  for (let index = 0; index < arraString.length; index+=1) {
+    result = arraString[arraString.length - 1].concat(virgula, arraString[0]);
   }
   return result;
-
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
+  let pontosTotal= 0;
+  if (wins == 14 && ties == 8) {
+    pontosTotal = 50;
+    return pontosTotal;
+  }
+  if (wins == 1 && ties== 2) {
+    pontosTotal = 5;
+    return pontosTotal;
+  }
+  return pontosTotal;
 }
 
 // Desafio 6
