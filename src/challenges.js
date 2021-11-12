@@ -29,9 +29,8 @@ function splitSentence(phrase) {
 function concatName(arraString) {
   // seu código aqui
   let result;
-  let virgula = ', ';
   for (let index = 0; index < arraString.length; index += 1) {
-    result = arraString[arraString.length - 1].concat(virgula, arraString[0]);
+    result = arraString[arraString.length - 1]+ ', '+ arraString[0];
   }
   return result;
 }
@@ -39,15 +38,7 @@ function concatName(arraString) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let pontosTotal = 0;
-  if (wins === 14 && ties === 8) {
-    pontosTotal = 50;
-    return pontosTotal;
-  }
-  if (wins === 1 && ties === 2) {
-    pontosTotal = 5;
-    return pontosTotal;
-  }
+  let pontosTotal = (wins * 3) + (ties * 1);
   return pontosTotal;
 }
 
