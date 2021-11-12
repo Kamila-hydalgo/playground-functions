@@ -4,7 +4,7 @@ function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
   }
-    return false;
+  return false;
 }
 
 // Desafio 2
@@ -24,20 +24,20 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 
 function concatName(arraString) {
   // seu código aqui
   let result;
-  let virgula= ', ';
-  for (let index = 0; index < arraString.length; index+=1) {
+  let virgula = ', ';
+  for (let index = 0; index < arraString.length; index += 1) {
     result = arraString[arraString.length - 1].concat(virgula, arraString[0]);
   }
   return result;
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   // seu código aqui
   let pontosTotal = 0;
   if (wins === 14 && ties === 8) {
@@ -52,37 +52,40 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount(arraNumber) {
+function highestCount() {
   // seu código aqui
-  for (let index= 0; index<arraNumber.length; index +=1) {
 
-  }
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distancia1 = Math.abs(mouse - cat1);
+  let distancia2 = Math.abs(mouse - cat2);
+  if (distancia1 === distancia2) {
+    return 'os gatos trombam e o rato foge';
+  } if (distancia1 < distancia2) {
+    return 'cat1';
+  }
+  return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(arrayInteiros) {
-  // seu código aqui
   let resultado = [];
-  for (let index = 0; index < arrayInteiros.length; index +=1) {
-
-    if (arrayInteiros[index]%3 === 0 && arrayInteiros[index]%5 === 0) {
-    resultado.push('fizzBuzz');
-    } else if (arrayInteiros[index]%3 === 0) {
-    resultado.push('fizz');
-    } else if (arrayInteiros[index]%5 === 0) {
-    resultado.push('buzz');
-      } else {
-    resultado.push('bug!');
+  for (let index = 0; index < arrayInteiros.length; index += 1) {
+    if (arrayInteiros[index] % 3 === 0 && arrayInteiros[index] % 5 === 0) {
+      resultado.push('fizzBuzz');
+    } else if (arrayInteiros[index] % 3 === 0) {
+      resultado.push('fizz');
+    } else if (arrayInteiros[index] % 5 === 0) {
+      resultado.push('buzz');
+    } else {
+      resultado.push('bug!');
     }
   }
   return resultado;
 }
-
 
 // Desafio 9
 function encode() {
