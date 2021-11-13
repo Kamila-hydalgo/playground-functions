@@ -71,19 +71,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// Referência ao colega @SrTonn pelo conhecimento do FOR EACH.
+// Referência FOR EACH: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 function fizzBuzz(arrayInteiros) {
   let resultado = [];
-  for (let index = 0; index < arrayInteiros.length; index += 1) {
-    if (arrayInteiros[index] % 3 === 0 && arrayInteiros[index] % 5 === 0) {
+  arrayInteiros.forEach((index) => {
+    if (index % 3 === 0 && index % 5 === 0) {
       resultado.push('fizzBuzz');
-    } else if (arrayInteiros[index] % 3 === 0) {
+    } else if (index % 3 === 0) {
       resultado.push('fizz');
-    } else if (arrayInteiros[index] % 5 === 0) {
+    } else if (index % 5 === 0) {
       resultado.push('buzz');
     } else {
       resultado.push('bug!');
     }
-  }
+  });
   return resultado;
 }
 
