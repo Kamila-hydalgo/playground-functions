@@ -25,10 +25,10 @@ function splitSentence(phrase) {
 
 // Desafio 4
 // Referência sobre concatenação de strings: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
-// Referência ao colega @SrTonn pelo seu code review neste Desafio.
+// Referência ao colega @SrTonn pelo seu code review neste meu Desafio.
 function concatName(arraString) {
   // seu código aqui
-  let result = arraString[arraString.length - 1]+ ', '+ arraString[0];
+  let result = arraString[arraString.length - 1].concat(', ', arraString[0]);
   return result;
 }
 
@@ -90,10 +90,11 @@ function fizzBuzz(arrayInteiros) {
 }
 
 // Desafio 9
-function encode(text) {
+// Referência do uso do REPLACE: https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex?gclid=Cj0KCQiA4b2MBhD2ARIsAIrcB-SLP_9HTL5T2KwrgG-ps5NeLiXlhYF_hUyUc97QsQsjZr_vA8kAWL4aAnTbEALw_wcB
+function encode(encodeText) {
   // seu código aqui
   let result;
-  let textA = text.replace(/a/g, '1');
+  let textA = encodeText.replace(/a/g, '1');
   let textE = textA.replace(/e/g, '2');
   let textI = textE.replace(/i/g, '3');
   let textO = textI.replace(/o/g, '4');
