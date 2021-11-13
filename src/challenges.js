@@ -24,14 +24,11 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
-
+// Referência sobre concatenação de strings: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+// Referência ao colega @SrTonn pelo seu code review neste Desafio.
 function concatName(arraString) {
   // seu código aqui
-  let result;
-  for (let index = 0; index < arraString.length; index += 1) {
-    result = arraString[arraString.length - 1]+ ', '+ arraString[0];
-  }
+  let result = arraString[arraString.length - 1]+ ', '+ arraString[0];
   return result;
 }
 
@@ -43,12 +40,24 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+// Referência sobre FILTER: https://blog.betrybe.com/javascript/javascript-filter/
+// Referência ao colega @SrTonn sobre o melhor entendimento do FILTER;
+function highestCount(array1) {
   // seu código aqui
-
+  let higherNumber = 0;
+  array1.sort((a, b) => a - b);
+  higherNumber = array1[array1.length];
+  let result = array1.filter((value) => {
+    // Função seta pode ser utilizada no lugar de escrever FUNCTION!
+    if (value === higherNumber) return true;
+    return false;
+  });
+  return result.length;
 }
 
 // Desafio 7
+// Referência sobre o Math.abs: https://www.w3schools.com/jsref/jsref_abs.asp
+
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distancia1 = Math.abs(mouse - cat1);
