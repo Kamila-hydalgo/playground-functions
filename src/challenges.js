@@ -46,7 +46,7 @@ function highestCount(array1) {
   // seu código aqui
   let higherNumber = 0;
   array1.sort((a, b) => a - b);
-  higherNumber = array1[array1.length];
+  higherNumber = array1[array1.length - 1];
   let result = array1.filter((value) => {
     // Função seta pode ser utilizada no lugar de escrever FUNCTION!
     if (value === higherNumber) return true;
@@ -90,11 +90,27 @@ function fizzBuzz(arrayInteiros) {
 }
 
 // Desafio 9
-function encode() {
+function encode(text) {
   // seu código aqui
+  let result;
+  let textA = text.replace(/a/g, '1');
+  let textE = textA.replace(/e/g, '2');
+  let textI = textE.replace(/i/g, '3');
+  let textO = textI.replace(/o/g, '4');
+  let textU = textO.replace(/u/g, '5');
+  result = textU;
+  return result;
 }
-function decode() {
+function decode(decodeText) {
   // seu código aqui
+  let result2;
+  let text1 = decodeText.replace(/1/g, 'a');
+  let text2 = text1.replace(/2/g, 'e');
+  let text3 = text2.replace(/3/g, 'i');
+  let text4 = text3.replace(/4/g, 'o');
+  let text5 = text4.replace(/5/g, 'u');
+  result2 = text5;
+  return result2;
 }
 
 module.exports = {
