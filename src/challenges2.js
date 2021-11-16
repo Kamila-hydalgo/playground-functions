@@ -20,15 +20,15 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let dist1 = Math.abs(lineA - lineB);
-  let dist2 = Math.abs(lineB - lineC);
-  let dist3 = Math.abs(lineA - lineC);
+  let dif1 = Math.abs(lineA - lineB);
+  let dif2 = Math.abs(lineB - lineC);
+  let dif3 = Math.abs(lineA - lineC);
 
-  if (lineA < (lineB + lineC) && lineA > dist2){
+  if (lineA < (lineB + lineC) && lineA > dif2) {
     return true;
-  } else if (lineB < (lineA + lineC) && lineB > dist3){
+  } else if (lineB < (lineA + lineC) && lineB > dif3) {
     return true;
-  } else if (lineC < (lineA + lineB) && lineC > dist1) {
+  } else if (lineC < (lineA + lineB) && lineC > dif1) {
     return true;
   } else {
     return false;
@@ -36,8 +36,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+// Referência de extrair números de string(uso do MATCH): https://www.youtube.com/watch?v=pfkkdzeyx6U
+// Entendimento do PARSEINT na monitoria do Thalles.
+function hydrate(order) {
   // seu código aqui
+  let numbers = order.match(/\d+/g);
+  let soma = 0;
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    soma += parseInt(numbers[index], 10);
+  }
+  if (soma === 1) {
+    soma += ' copo de água';
+  } else if (soma > 1) {
+    soma += ' copos de água';
+  }
+
+  return soma;
 }
 
 module.exports = {
