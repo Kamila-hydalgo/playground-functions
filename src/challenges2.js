@@ -18,11 +18,12 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
+// Refatoração do código feita com ajuda do colega Caio Swame.
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let dif2 = Math.abs(lineB - lineC);
+  let dif = Math.abs(lineB - lineC);
 
-  if (lineA < (lineB + lineC) && lineA > dif2) {
+  if (lineA < (lineB + lineC) && lineA > dif) {
     return true;
   }
   return false;
