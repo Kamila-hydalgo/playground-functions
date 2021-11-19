@@ -4,8 +4,8 @@ function techList(array, name) {
   let arrayOrd = array.sort();
   let list = [];
   for (let index of arrayOrd) {
-    list.push({ tech: index, name: name });
-  } 
+    list.push({ tech: index, name });
+  }
   if (list.length === 0) {
     return 'Vazio!';
   }
@@ -13,8 +13,36 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+// Referência: Ajuda dos colegas @SrTonn, Kesley Muniz e Polyana Sousa no desenvolvimento do código
+function generatePhoneNumber(arraNumbers) {
+  // seu código aqui.
+  if (arraNumbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  let contador = 0;
+  let phoneNumber;
+  let DDD = arraNumbers.slice(0, 2).join('');
+  let firstDigits = arraNumbers.slice(2, 7).join('');
+  let lastDigits = arraNumbers.slice(7).join('');
+  // por ser os últimos número não preciso dizer a qnt final
+  for (let index = 0; index < arraNumbers.length; index += 1) {
+    for (let index2 = 0; index2 < arraNumbers.length; index2 += 1) {
+      if (arraNumbers[index] === arraNumbers[index2]) {
+        contador += 1;
+      }
+    }
+    if (contador >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    contador = 0;
+  }
+  for (let number of arraNumbers) {
+    if (number < 0 || number > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    phoneNumber = '(' + DDD + ') ' + firstDigits + '-' + lastDigits;
+  }
+  return phoneNumber;
 }
 
 // Desafio 12
