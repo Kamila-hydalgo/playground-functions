@@ -16,11 +16,8 @@ function techList(array, name) {
 // Referência: Ajuda dos colegas @SrTonn, Kesley Muniz e Polyana Sousa no desenvolvimento do código
 function generatePhoneNumber(arraNumbers) {
   // seu código aqui.
-  if (arraNumbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
   let contador = 0;
-  let phoneNumber;
+  let phoneNumber = '';
   let DDD = arraNumbers.slice(0, 2).join('');
   let firstDigits = arraNumbers.slice(2, 7).join('');
   let lastDigits = arraNumbers.slice(7).join('');
@@ -36,12 +33,15 @@ function generatePhoneNumber(arraNumbers) {
     }
     contador = 0;
   }
+  if (arraNumbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
   for (let number of arraNumbers) {
     if (number < 0 || number > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    phoneNumber = '(' + DDD + ') ' + firstDigits + '-' + lastDigits;
   }
+  phoneNumber = '(' + DDD + ') ' + firstDigits + '-' + lastDigits;
   return phoneNumber;
 }
 
